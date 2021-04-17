@@ -3,9 +3,7 @@ module.exports = [
     //先安装在配置， npm install @vuepress-reco/vuepress-plugin-kan-ban-niang --save
     "@vuepress-reco/vuepress-plugin-kan-ban-niang",
     {
-      theme: [
-        "wanko",
-      ],
+      theme: ["wanko"],
       clean: true,
       messages: {
         welcome: "我是lookroot欢迎你的关注 ",

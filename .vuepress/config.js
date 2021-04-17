@@ -6,8 +6,11 @@ module.exports = {
   theme: "reco",
   themeConfig: {
     author: "南风",
+    authorAvatar: "/avatar.jpg",
     type: "blog",
+
     nav: require("./config/nav"),
+    sidebar: require("./config/sidebar"),
     blogConfig: require("./config/blogConfig"),
     friendLink: require("./config/friendLink"),
     other: require("./config/other"),
