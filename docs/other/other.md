@@ -1,10 +1,10 @@
 ---
-title: other
-date: 2021-04-17
+title: 前端路线图
+date: 2021-04-18
 tags:
   - other
 categories:
   - other
 ---
 
-this page is other
+![前端路线](../../.vuepress/public/前端路线.png)
