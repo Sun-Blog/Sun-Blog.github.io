@@ -8,9 +8,9 @@ module.exports = {
     author: "南风",
     authorAvatar: "/avatar.jpg",
     type: "blog",
+    subSidebar: "auto", //在所有页面中启用自动生成子侧边栏，原 sidebar 仍然兼容
 
     nav: require("./config/nav"),
-    sidebar: require("./config/sidebar"),
     blogConfig: require("./config/blogConfig"),
     friendLink: require("./config/friendLink"),
     other: require("./config/other"),

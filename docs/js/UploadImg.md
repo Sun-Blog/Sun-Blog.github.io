@@ -1,0 +1,45 @@
+---
+title: 图片批量上传
+date: 2021-04-18
+tags:
+  - js
+categories:
+  - js
+---
+
+formData 主要用于发送表单数据，但是也可以用来发送键值对数据(key:value)，如果表单 enctype 属性设为 multipart/form-data ，则会使用表单的 submit()方法来发送数据，从而，发送数据具有同样形式
+
+### 前言
+
+项目要求实现图片批量上传，在此记录实现此功能的方法
+
+### 代码
+
+```javascript
+var formData = new FormData();
+for (var i = 0; i < fileArray.length ; i++){
+    formData.append("files", fileArray[i]);
+}
+
+// 发送数据
+$.ajax({
+    type: "post",
+    url: '请求接口',
+    data: formData,
+    processData: false,  //数据是否格式化(no)
+    contentType: false,  //是否添加请求头，不要添加，否则会出现400的错误
+    async: false,  //true 异步  false 同步
+    success: function (data) {
+        if (data > 0) {
+            alert('上传成功！'
+        }
+    },
+    error:function () {
+        alert('上传失败');
+    }
+});
+```
+
+### 参考文章
+
+​ [从 FormData 到图片上传](https://juejin.cn/post/6844903666135072781)
