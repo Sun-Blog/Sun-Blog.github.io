@@ -7,4 +7,4 @@ categories:
   - other
 ---
 
-![前端路线](../../.vuepress/public/前端路线.png)
+![前端路线](../../.vuepress/public/routeMap.png)
