@@ -1,6 +1,6 @@
 ---
 title: vue
-date: 2021-04-17
+date:
 tags:
   - vue
 categories:

@@ -57,4 +57,5 @@ module.exports = [
       },
     },
   ],
+  ["@vuepress-reco/vuepress-plugin-pagation", {}], //分页插件
 ];
