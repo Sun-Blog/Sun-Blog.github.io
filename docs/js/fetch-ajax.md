@@ -7,6 +7,8 @@ categories:
   - js
 ---
 
+<Boxx/>
+
 ajax 与 fetch 都是前端开发过程中常用到的数据请求方式。fetch 是一种 http 数据请求的方式，是 XMLHttpRequest 的一种替代方案；ajax 使用 JavaScript 向服务器提出请求并处理响应而不阻塞用户核心对象 XMLHttpRequest。
 
 ### ajax

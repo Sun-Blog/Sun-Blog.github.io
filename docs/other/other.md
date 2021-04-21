@@ -7,4 +7,6 @@ categories:
   - other
 ---
 
+<Boxx/>
+
 ![前端路线](../../.vuepress/public/routeMap.png)

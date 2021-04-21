@@ -7,6 +7,8 @@ categories:
   - css
 ---
 
+<Boxx/>
+
 ### 清除浮动
 
 ```css
