@@ -7,4 +7,6 @@ categories:
   - vue
 ---
 
+<Boxx/>
+
 this page is vue

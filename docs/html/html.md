@@ -1,10 +1,12 @@
 ---
 title: html
-date: 
+date:
 tags:
   - html
 categories:
   - html
 ---
+
+<Boxx/>
 
 second page in html

@@ -1,10 +1,12 @@
 ---
 title: react
-date: 
+date:
 tags:
   - react
 categories:
   - react
 ---
+
+<Boxx/>
 
 this page is react

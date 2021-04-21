@@ -7,4 +7,6 @@ categories:
   - node
 ---
 
+<Boxx/>
+
 this page is node
