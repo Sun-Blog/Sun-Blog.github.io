@@ -69,17 +69,22 @@ var recorder = null;
 //  开始录音
 function startRecording() {
     if (!ws) {
-            var ws = new WebSocket(wsTalkURL());
+            ws = new WebSocket(wsTalkURL());
+            if(ws.readyState == 0) {
+                layer.msg("正在建立连接，请稍后");
+                console.log("ws talk connecting");
+            }
             ws.onopen = evt => {
+                layer.msg("连接成功，开始语音");
+                $('.VoiceChat').html('正在录音');
                 console.log("ws talk open");
-                this.ws = ws;
+                ws = ws;
             }
             ws.onerror = evt => {
                 console.log("ws talk error", evt);
             }
         }
         if (recorder) {
-            $('.VoiceChat').html('正在录音');
             recorder.start();
             return;
         }
@@ -88,7 +93,6 @@ function startRecording() {
                 alert(err);
                 return
             }
-            $('.VoiceChat').html('正在录音');
             recorder = rec;
             recorder.start();
         }, {
@@ -99,7 +103,7 @@ function startRecording() {
                 reader.onloadend = () => {
                     var base64 = reader.result;
                     var base64 = base64.split(',')[1];
-                    var messageObj = {serial:liveid,channel:value,audio:base64};
+                    var messageObj = { serial: liveid, channel: value, audio: base64 };
                     var messageJson = JSON.stringify(messageObj);
                     if (ws) {
                         ws.send(messageJson);
@@ -117,8 +121,10 @@ function endRecording() {
             $('.VoiceChat').html('语音通话');
         }
         if (ws) {
+            ws = new WebSocket(wsTalkURL());
             ws.close();
             ws = null;
+            layer.msg("语音关闭");
         }
 }
 
