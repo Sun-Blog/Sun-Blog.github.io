@@ -7,6 +7,6 @@ categories:
   - html
 ---
 
-<Boxx/>
+<articleTop></articleTop>
 
 second page in html

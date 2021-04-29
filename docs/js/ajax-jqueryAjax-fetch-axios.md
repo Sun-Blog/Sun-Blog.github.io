@@ -8,7 +8,7 @@ categories:
 
 ---
 
-<Boxx/>
+<articleTop></articleTop>
 
 [**「Ajax」:**](https://developer.mozilla.org/zh-CN/docs/Web/Guide/AJAX)
 

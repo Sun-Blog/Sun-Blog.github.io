@@ -7,9 +7,7 @@ categories:
   - js
 
 ---
-
-<Boxx/>
-
+<articleTop></articleTop>
 ## 一、基本语法
 
 ```javascript

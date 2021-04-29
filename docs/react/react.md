@@ -7,6 +7,6 @@ categories:
   - react
 ---
 
-<Boxx/>
+<articleTop></articleTop>
 
 this page is react

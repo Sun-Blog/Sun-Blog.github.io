@@ -8,7 +8,7 @@ categories:
 
 ---
 
-<Boxx/>
+<articleTop></articleTop>
 
 ## Ajax - IE缓存问题
 

@@ -7,7 +7,7 @@ categories:
   - js
 ---
 
-<Boxx/>
+<articleTop></articleTop>
 
 formData 主要用于发送表单数据，但是也可以用来发送键值对数据(key:value)，如果表单 enctype 属性设为 multipart/form-data ，则会使用表单的 submit()方法来发送数据，从而，发送数据具有同样形式
 

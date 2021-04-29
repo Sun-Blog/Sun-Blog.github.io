@@ -7,6 +7,6 @@ categories:
   - node
 ---
 
-<Boxx/>
+<articleTop></articleTop>
 
 this page is node

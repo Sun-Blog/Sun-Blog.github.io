@@ -7,7 +7,7 @@ categories:
   - other
 ---
 
-<Boxx/>
+<articleTop></articleTop>
 
 ## Git安装
 
