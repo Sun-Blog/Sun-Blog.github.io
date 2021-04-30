@@ -4,7 +4,7 @@ module.exports = [
     "@vuepress-reco/vuepress-plugin-kan-ban-niang",
     {
       theme: ["wanko"],
-      clean: true,
+      clean: false,
       messages: {
         welcome: "我是lookroot欢迎你的关注 ",
         home: "心里的花，我想要带你回家。",
