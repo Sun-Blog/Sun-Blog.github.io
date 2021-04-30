@@ -1,19 +1,19 @@
 module.exports = [
   [
     //先安装在配置， npm install @vuepress-reco/vuepress-plugin-kan-ban-niang --save
-    "@vuepress-reco/vuepress-plugin-kan-ban-niang",
-    {
-      theme: ["wanko"],
-      clean: false,
-      messages: {
-        welcome: "我是lookroot欢迎你的关注 ",
-        home: "心里的花，我想要带你回家。",
-        theme: "好吧，希望你能喜欢我的其他小伙伴。",
-        close: "再见哦",
-      },
-      width: 240,
-      height: 352,
-    },
+    // "@vuepress-reco/vuepress-plugin-kan-ban-niang",
+    // {
+    //   theme: ["wanko"],
+    //   clean: false,
+    //   messages: {
+    //     welcome: "我是lookroot欢迎你的关注 ",
+    //     home: "心里的花，我想要带你回家。",
+    //     theme: "好吧，希望你能喜欢我的其他小伙伴。",
+    //     close: "再见哦",
+    //   },
+    //   width: 240,
+    //   height: 352,
+    // },
   ],
   [
     //鼠标点击特效 先安装在配置， npm install vuepress-plugin-cursor-effects --save
