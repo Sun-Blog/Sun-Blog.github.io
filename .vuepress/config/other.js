@@ -1,5 +1,5 @@
 module.exports = {
-  logo: "/logo.png",
+  logo: "/avatar.jpg",
   // 搜索设置
   search: true,
   searchMaxSuggestions: 5,
