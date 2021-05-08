@@ -308,3 +308,81 @@ var arr = ['hello','world','jack','tom'];
 var res = arr.join('-'); // hello-world-jack-tom
 ```
 
+indexOf()、lastIndexOf()、forEach()、map()
+
+```javascript
+// indexOf()
+// 语法：数组.indexOf(数据,开始索引)，开始索引 可不写；
+// 作用：正向查看数组里面指定数据的索引；
+// 返回值：有数据，返回第一个满足条件的数据索引；无数据返回-1
+var arr = ['hello','world','jack','tom','hello'];
+var res = arr.indexOf('hello');  // 0
+
+// lastIndexOf()
+// 语法：数组.lastIndexOf(数据,开始索引)，开始索引 可不写；
+// 作用：反向查看数组里面指定数据的索引；
+// 返回值：有数据，返回第一个满足条件的数据索引；无数据返回-1
+var arr = ['hello','world','jack','tom','hello'];
+var res = arr.lastIndexOf('hello');  // 4
+
+// forEach()
+// 语法：数组.forEach(function(item,index,arr) {})，item：数组每一项，index：数组每一项的索引，arr：原始数组；
+// 作用：取代for循环的作用，遍历数组；
+// 返回值：没有返回值
+var arr = ['hello','world','jack','tom','hello'];
+var res = arr.forEach(function(item,index,arr) {
+    console.log(index, item);
+});
+ 
+// map()
+// 语法：数组.map(function(item,index,arr) {})，item：数组每一项，index：数组每一项的索引，arr：原始数组；
+// 作用：取代for循环的作用，遍历数组；
+// 返回值：返回新数组，里面是对原始数组每一个数据的操作，返回值数组一定和原始数组长度一样
+var arr = [10,100,1000];
+var res = arr.map(function(item,index,arr) {
+    console.log(index, item, arr);
+});
+```
+
+filter()、every()、some()、flat()
+
+```javascript
+// filter()
+// 语法：数组.filter(function(item,index,arr) {})，item：数组每一项，index：数组每一项的索引，arr：原始数组；
+// 作用：过滤原始数组中的数据，将满足条件的放在新数组里面；
+// 返回值：返回新数组，里面是原始数组中所有满足提那件的项
+var arr = [10,100,1000];
+var res = arr.filter(function(item,index,arr) {
+    return item > 100;
+});
+console.log(res); // [1000]
+
+// every()
+// 语法：数组.every(function(item,index,arr) {})，item：数组每一项，index：数组每一项的索引，arr：原始数组；
+// 作用：判断原始数组中是不是每一项都满足条件
+// 返回值：返回布尔值；满足为true，不满足为false
+var arr = [10,100,1000];
+var res = arr.every(function(item,index,arr) {
+    return item > 100;
+});
+console.log(res); // false
+
+// some()
+// 语法：数组.some(function(item,index,arr) {})，item：数组每一项，index：数组每一项的索引，arr：原始数组；
+// 作用：判断原始数组中是不是有某一项满足条件
+// 返回值：返回布尔值；满足为true，不满足为false
+var arr = [10,100,1000];
+var res = arr.some(function(item,index,arr) {
+    return item > 1000;
+});
+console.log(res); // false
+
+// flat()
+// 语法：数组.flat(数字)；
+// 作用：多维数组转为一维数组
+// 返回值：转换后的数组
+var arr = [10,100,[20,25,[42,56,19]]];
+var res = arr.flat(Infinity);
+console.log(res); // [10, 100, 20, 25, 42, 56, 19]
+```
+
