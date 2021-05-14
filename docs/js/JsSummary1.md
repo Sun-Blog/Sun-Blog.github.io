@@ -1,6 +1,6 @@
 ---
 
-title: js总结
+title: js总结(一)
 date: 2021-05-06
 tags:
   - js
