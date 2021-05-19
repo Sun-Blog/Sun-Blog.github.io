@@ -31,7 +31,7 @@ var str = new String('hello world');
 
 ### 常用方法
 
-charAt()、charCodeAt()、substr()
+charAt()、charCodeAt()、substr()、split()
 
 ```javascript
 // 说明：所有字符串方法都不会改变原始字符串
@@ -57,6 +57,14 @@ console.log(res); // 101
 var str = "hello world";
 var res = str.substr(1,3);
 console.log(res); // ell
+
+// split()
+// 语法：字符串.split()
+// 作用：将字符串分割成字符串数组
+// 返回值：字符串数组
+var str = "hello world";
+var res = str.split();
+console.log(res); // ["hello world"]
 ```
 
 indexOf()、lastIndexOf()、includes()、search()、match()、trim()
@@ -111,8 +119,6 @@ var res = str.trim('wo');
 console.log(res); // hello world
 ```
 
-
-
 ## 模板字符串
 
 ### 定义
@@ -124,4 +130,42 @@ console.log(res); // hello world
 1. 单引号和双引号定义的字符串不能换行；模板字符串可以换行
 2. 单引号和双引号不能直接在字符串里解析变量；模板字符串可以，是要写 ${ 变量 };
 3. 兼容性问题；es6语法，IE低版本不支持
+
+## 本地缓存
+
+localStorage、sessionStorage
+
+区别：
+
+> localStorage  永久缓存，除非手动删除
+>
+> sessionStorage  会话缓存，关闭浏览器就没有了
+
+共同点：
+
+> 只能存储字符串格式的数据
+>
+> 若要存储对象结构的数据，需转换为json格式
+
+语法：
+
+> `localStorage`
+>
+> ​	localStorage.setItem('名字', '值');  //存储数据
+>
+> ​	localStorage.setItem('名字');  //获取数据
+>
+> ​	localStorage.removeItem('名字');  //删除数据
+>
+> ​	localStorage.clear();  //清空所有数据
+>
+> `sessionStorage`
+>
+> ​	sessionStorage.setItem('名字', '值');  //存储数据
+>
+> ​	sessionStorage.setItem('名字');  //获取数据
+>
+> ​	sessionStorage.removeItem('名字');  //删除数据
+>
+> ​	sessionStorage.clear();  //清空所有数据
 
