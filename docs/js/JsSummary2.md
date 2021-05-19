@@ -31,6 +31,8 @@ var str = new String('hello world');
 
 ### 常用方法
 
+charAt()、charCodeAt()、substr()
+
 ```javascript
 // 说明：所有字符串方法都不会改变原始字符串
 
@@ -55,6 +57,58 @@ console.log(res); // 101
 var str = "hello world";
 var res = str.substr(1,3);
 console.log(res); // ell
+```
+
+indexOf()、lastIndexOf()、includes()、search()、match()、trim()
+
+```javascript
+// indexOf()
+// 语法：字符串.indexOf(字符串片段,开始索引)
+// 作用：在字符串里面查找指定字符串片段
+// 返回值：查询到了就返回指定索引，没有查询到返回-1
+var str = "hello world";
+var res = str.indexOf('l',4);
+console.log(res); // 9
+
+// lastIndexOf()
+// 语法：字符串.lastIndexOf(字符串片段,开始索引)
+// 作用：在字符串里面查找指定字符串片段(从后向前)
+// 返回值：查询到了就返回指定索引，没有查询到返回-1
+var str = "hello world";
+var res = str.lastIndexOf('wo');
+console.log(res); // 6
+
+// includes()
+// 语法：字符串.includes(字符串片段)
+// 作用：查找字符串里面是否包含该字符串片段
+// 返回值：布尔值（true or false）
+var str = "hello world";
+var res = str.includes('wo');
+console.log(res); // true
+
+// search()
+// 语法：字符串.search(字符串片段)
+// 作用：查找字符串里面是否包含该字符串片段
+// 返回值：存在返回指定索引，不存在返回-1
+var str = "hello world";
+var res = str.search('wo');
+console.log(res); // 6
+
+// match()
+// 语法：字符串.match(字符串片段)
+// 作用：查找字符串里面是否包含该字符串片段
+// 返回值：是一个数组，里面是找到的字符串片段
+var str = "hello world";
+var res = str.match('wo');
+console.log(res); // ["wo", index: 6, input: "hello world", groups: undefined]
+
+// trim()
+// 语法：字符串.trim()
+// 作用：去除首尾空格
+// 返回值：去除空格后的字符串
+var str = "  hello world  ";
+var res = str.trim('wo');
+console.log(res); // hello world
 ```
 
 
