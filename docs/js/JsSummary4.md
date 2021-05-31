@@ -11,7 +11,7 @@ categories:
 
 <articleTop></articleTop>
 
-## DOM节点
+## DOM节点操作
 
 ### 获取节点
 
@@ -102,3 +102,74 @@ createAttribute()
 > 语法：document.createAttribute('属性名')
 >
 > 返回值：一个属性节点
+
+### 插入节点
+
+appendChild()
+
+> 语法：父节点.appendChild(子节点)
+>
+> 作用：把子节点插入到父节点里面，放在最后一个节点的位置
+
+insertBefore()
+
+> 语法：父节点.insertBefore(要插入的子节点，哪一个子节点前面)
+>
+> 作用：把子节点插入到指定父节点的指定子节点前面
+
+### 删除节点
+
+removeChild()
+
+> 语法：父节点.removeChild(子节点)
+>
+> 作用：把子节点从父节点里移除
+
+remove()
+
+> 语法：子节点.remove()
+>
+> 作用：把自己移出父节点
+
+### 替换节点
+
+replaceChild()
+
+> 语法：父节点.replaceChild(新节点，旧节点)
+>
+> 作用：在父节点下，用新节点替换旧节点
+
+### 克隆节点
+
+cloneNode
+
+> 语法：节点.cloneNode(参数)
+>
+> + 参数选填，默认是false，不克隆后代节点；选填为true时，表示克隆所有后代节点
+>
+> 返回值：一个克隆好的节点
+
+## 获取元素尺寸
+
+```javascript
+// offsetWidth 与 offsetHeight
++ 语法：
+	-> 元素.offsetWidth
+	-> 元素.offsetHeight
++ 得到：
+	-> 元素的内容 + padding + border 区域的尺寸
+
+// clientWidth 与 clientHeight
++ 语法：
+	-> 元素.clientWidth
+	-> 元素.clientHeight
++ 得到：
+	-> 元素的内容 + padding 区域的尺寸  
+```
+
+:::warning
+
+display:none  后，得到的值为0
+
+:::
+

@@ -1,0 +1,81 @@
+---
+
+title: 事件
+date: 2021-05-26
+tags:
+  - js
+categories:
+  - js
+
+---
+
+<articleTop></articleTop>
+
+## 事件分类
+
++ `dom0级`事件
+  + on...的形式；例如：`curEle.onclick=function(){}`
++ `dom2级`事件
+  + 事件监听；
+  + 例如：
+    + 标准浏览器：`urEle.addEventListener('click',function(){},false)`
+    + IE6-8：`curEle.attachEvent('onclick',function(){})`
+
+## 事件解绑
+
++ `dom0级`事件
+  + 直接给事件赋值为`null`；例如：`curEle.onclick=null`
+
++ `dom2级`事件
+  + 标准浏览器：`removeEventListener`进行解绑；`removeEventListener('事件类型', '要解绑的事件处理函数')`
+  + IE6-8：`detachEvent`进行解绑；`detachEvent('事件类型', '要解绑的事件处理函数')`
+  + 例如：
+    + 标准浏览器：`urEle.removeEventListener('click',函数名)`
+    + IE6-8：`urEle.detachEvent('click',函数名)`
+
+## 冒泡事件、捕获事件
+
++ 冒泡事件
+  + 从目标到window的顺序依次触发事件
+
++ 捕获事件
+  + 从window到目标的顺序一次触发事件
+
+:::warning
+
+如果某一层结构上没有事件，那么就是没有事件处理函数执行，会继续传播
+
+:::
+
++ addEventListener()方法的第三个参数决定事件是按冒泡还是捕获来执行
+  + true：捕获
+  + false：冒泡（默认）
+
+## 移入移出事件区别
+
++ mouseover、mouseout 与 mouseenter、mouseleave
++ 行为：都是移入移出行为，会触发事件
++ 事件：mouseenter、mouseleave不会进行事件传播
+
+## 阻止事件传播
+
++ 方式一：`e.stopPropagation();`    标准浏览器
++ 方式二：`e.cacelBubble = true;`    IE低版本
++ 兼容：
+
+```javascript
+try {
+    e.stopPropagation();
+} catch () {
+    e.cacelBubble = true;
+}
+```
+
+## 事件委托
+
++ 利用事件冒泡的特性，将本应该注册在子元素上的处理事件注册在父元素上，这样点击子元素时发现其本身没有相应事件就到父元素上寻找作出相应
+
++ 优点：
+  + 减少元素的事件绑定
+  + 减少dom操作，提高性能
+  + 对于新添加进来的元素也可以执行事件，不需要重新绑定

@@ -8,6 +8,10 @@ isShowTitleInHome: true
 ---
 
 <style>
+.hero {
+  color: #FFF;
+}
+
 .anchor-down {
   display: block;
   margin: 12rem auto 0;

@@ -1,5 +1,5 @@
 module.exports = [
-  [
+  // [
     //先安装在配置， npm install @vuepress-reco/vuepress-plugin-kan-ban-niang --save
     // "@vuepress-reco/vuepress-plugin-kan-ban-niang",
     // {
@@ -14,7 +14,7 @@ module.exports = [
     //   width: 240,
     //   height: 352,
     // },
-  ],
+  // ],
   [
     //鼠标点击特效 先安装在配置， npm install vuepress-plugin-cursor-effects --save
     "cursor-effects",
@@ -45,18 +45,18 @@ module.exports = [
     },
   ],
   // 樱花插件
-  [
-    "sakura",
-    {
-      num: 20, // 默认数量
-      show: true, //  是否显示
-      zIndex: 9, // 层级
-      img: {
-        replace: false, // false 默认图 true 换图 需要填写httpUrl地址
-        httpUrl: "...", // 绝对路径
-      },
-    },
-  ],
+  // [
+  //   "sakura",
+  //   {
+  //     num: 20, // 默认数量
+  //     show: true, //  是否显示
+  //     zIndex: 9, // 层级
+  //     img: {
+  //       replace: false, // false 默认图 true 换图 需要填写httpUrl地址
+  //       httpUrl: "...", // 绝对路径
+  //     },
+  //   },
+  // ],
   ["@vuepress-reco/vuepress-plugin-pagation", {}], //分页插件
   ["ribbon-animation", {
     size: 90,   // 默认数据
