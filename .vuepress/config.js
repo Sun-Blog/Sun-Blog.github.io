@@ -41,18 +41,8 @@ module.exports = {
     "codeTheme": "tomorrow"
   },
   "markdown": {
-    "lineNumbers": false
+    "lineNumbers": true
   },
 
   'plugins': require("./config/plugins"),
-
-  // configureWebpack: (config, isServer) => {
-  //   if (!isServer) {
-  //     // 修改客户端的 webpack 配置
-  //     config.output.publicPath = config.mode === 'production'
-  //       ? 'https://pan.zealsay.com/blog/' // sample/essays 打包的默认路径为 ‘_nuxt’ 或者可以指定cdn 域名
-  //       : '/';
-  //     config.output.filename = "assets/js/[name].js";
-  //   }
-  // }
 }

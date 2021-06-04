@@ -10,7 +10,9 @@ categories:
 
 ---
 
+:::tip 定义
 时间对象、定时器、BOM、DOM
+:::
 <!-- more -->
 
 ## 时间对象(Date)

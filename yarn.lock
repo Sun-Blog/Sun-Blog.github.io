@@ -1642,6 +1642,13 @@
     "@leancloud/adapter-utils" "^1.1.0"
     "miniprogram-api-typings" "^2.10.2"
 
+"@moefe/vue-aplayer@^2.0.0-beta.5":
+  "integrity" "sha512-ytzp4GStzjftuh7H1rIS/ziqwV1FO67iTLSkDxgN0J2bqlO+rBgDDr83Y+pZKBIgRUc30uu/UZHqmE4QiBHHeg=="
+  "resolved" "https://registry.npmjs.org/@moefe/vue-aplayer/-/vue-aplayer-2.0.0-beta.5.tgz"
+  "version" "2.0.0-beta.5"
+  dependencies:
+    "vue" "^2.5.17"
+
 "@mrmlnc/readdir-enhanced@^2.2.1":
   "integrity" "sha1-UkryQNGjYFJ7cwR17PoTRKpUDd4="
   "resolved" "https://registry.npm.taobao.org/@mrmlnc/readdir-enhanced/download/@mrmlnc/readdir-enhanced-2.2.1.tgz"
@@ -7901,6 +7908,13 @@
   "resolved" "https://registry.npm.taobao.org/opencollective-postinstall/download/opencollective-postinstall-2.0.3.tgz"
   "version" "2.0.3"
 
+"openteam-postinstall@^1.0.2":
+  "integrity" "sha512-fwmwxXTJC9Cf+1+awPY6auO781smO7ka7YPHihTt9pxlLOqdoykvL2jg6CNnV7uyXujZSN6J+UhdRnHV1PywnA=="
+  "resolved" "https://registry.npmjs.org/openteam-postinstall/-/openteam-postinstall-1.0.2.tgz"
+  "version" "1.0.2"
+  dependencies:
+    "lodash" "^4.17.15"
+
 "opn@^5.5.0":
   "integrity" "sha1-/HFk+rVtI1kExRw7J9pnWMo7m/w="
   "resolved" "https://registry.npm.taobao.org/opn/download/opn-5.5.0.tgz"
@@ -11011,7 +11025,7 @@
   "resolved" "https://registry.npm.taobao.org/vue-template-es2015-compiler/download/vue-template-es2015-compiler-1.9.1.tgz"
   "version" "1.9.1"
 
-"vue@*", "vue@^2 || ^3.0.0-0", "vue@^2.0.0", "vue@^2.6.10":
+"vue@*", "vue@^2 || ^3.0.0-0", "vue@^2.0.0", "vue@^2.2.0", "vue@^2.6.10":
   "integrity" "sha1-dllNh31LEiNEBuhONSdcbVFBJcU="
   "resolved" "https://registry.npm.taobao.org/vue/download/vue-2.6.11.tgz?cache=0&sync_timestamp=1595984018055&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fvue%2Fdownload%2Fvue-2.6.11.tgz"
   "version" "2.6.11"
@@ -11066,6 +11080,15 @@
     "remove-markdown" "0.3.0"
     "striptags" "3.1.1"
 
+"vuepress-plugin-helper-live2d@^1.0.2":
+  "integrity" "sha512-OQFynzDJeuEpxv25oNE15otpfCV8Yf0Nxsqq2Y/RHRIdzMpgcp7B0HZRDKUjUqRUa+Sd0NxXbCdzPSxP/9TwWw=="
+  "resolved" "https://registry.npmjs.org/vuepress-plugin-helper-live2d/-/vuepress-plugin-helper-live2d-1.0.2.tgz"
+  "version" "1.0.2"
+  dependencies:
+    "chalk" "^2.4.2"
+    "lodash" "^4.17.15"
+    "openteam-postinstall" "^1.0.2"
+
 "vuepress-plugin-mailchimp@^1.4.1":
   "integrity" "sha1-Nz+h348DqJk4F7Cd37i9nQShxmU="
   "resolved" "https://registry.npm.taobao.org/vuepress-plugin-mailchimp/download/vuepress-plugin-mailchimp-1.4.2.tgz"
@@ -11073,6 +11096,13 @@
   dependencies:
     "jsonp" "^0.2.1"
     "query-string" "^6.9.0"
+
+"vuepress-plugin-meting@^0.2.3":
+  "integrity" "sha512-3WtCRlKqcB/cYcuFWT2odhnMlkyKK8ZVCeuBHGEWl6ncAEJwwtlgVN2BcwS3UBctDlhNsEefBMz5Ix2hrZpCUQ=="
+  "resolved" "https://registry.npmjs.org/vuepress-plugin-meting/-/vuepress-plugin-meting-0.2.3.tgz"
+  "version" "0.2.3"
+  dependencies:
+    "@moefe/vue-aplayer" "^2.0.0-beta.5"
 
 "vuepress-plugin-nuggets-style-copy@^1.0.3":
   "integrity" "sha512-0v+9i8ZkD0a87nxH/KGioJE6Szeh5ZMBQxRyjEyeUo3B/OSXuuED9ih6+JW2e3LKbsxkza1ZAv8dVXNurKXtFw=="
@@ -11136,13 +11166,6 @@
   "version" "1.0.7"
   dependencies:
     "makeerror" "1.0.x"
-
-"watchpack-chokidar2@^2.0.0":
-  "integrity" "sha1-mUihhmy71suCTeoTp+1pH2yN3/A="
-  "resolved" "https://registry.npm.taobao.org/watchpack-chokidar2/download/watchpack-chokidar2-2.0.0.tgz"
-  "version" "2.0.0"
-  dependencies:
-    "chokidar" "^2.1.8"
 
 "watchpack@^1.7.4":
   "integrity" "sha1-bp2lOzyAuy1lCBiPWyAEEIZs0ws="
