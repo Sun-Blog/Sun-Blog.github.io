@@ -1,14 +1,14 @@
 module.exports = [
-  {
-    title: "午后南杂",
-    desc: "Enjoy when you can, and endure when you must.",
-    email: "1156743527@qq.com",
-    link: "https://www.recoluan.com",
-  },
-  {
-    title: "南风",
-    desc: "南风知我意，吹梦到西洲",
-    avatar: "https://vuepress-theme-reco.recoluan.com/icon_vuepress_reco.png",
-    link: "https://vuepress-theme-reco.recoluan.com",
-  },
-];
+    {
+        "title": "南风",
+        "desc": "南风知我意，吹梦到西洲。",
+        "logo": "https://p26-tt.byteimg.com/origin/pgc-image/bbc9993bf04442938c3696c4501c6f55.jpg",
+        "link": "https://sun-blog.github.io/"
+    },
+    {
+        "title": "午后南杂",
+        "desc": "Enjoy when you can, and endure when you must.",
+        "logo": "https://vuepress-theme-reco.recoluan.com/icon_vuepress_reco.png",
+        "link": "https://www.recoluan.com"
+    }
+]
