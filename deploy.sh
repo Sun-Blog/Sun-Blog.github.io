@@ -1,6 +1,6 @@
 npm run build
 
-cd public
+cd dist
 
 git init
 git add .
@@ -10,4 +10,4 @@ git push -f https://github.com/sun-blog/sun-blog.github.io.git master
 
 cd ../
 
-rm -rf public
+rm -rf dist
