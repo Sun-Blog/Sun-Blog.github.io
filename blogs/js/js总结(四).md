@@ -10,7 +10,7 @@ categories:
 
 ---
 
-:::tip 定义
+:::tip 涉及点
 DOM节点操作、获取元素尺寸
 :::
 <!-- more -->

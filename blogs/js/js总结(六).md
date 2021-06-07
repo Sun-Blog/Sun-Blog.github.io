@@ -10,7 +10,7 @@ categories:
 
 ---
 
-:::tip 定义
+:::tip 涉及点
 for of循环、Set数据结构、Map数据结构
 :::
 <!-- more -->

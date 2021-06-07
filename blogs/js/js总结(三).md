@@ -10,7 +10,7 @@ categories:
 
 ---
 
-:::tip 定义
+:::tip 涉及点
 时间对象、定时器、BOM、DOM
 :::
 <!-- more -->

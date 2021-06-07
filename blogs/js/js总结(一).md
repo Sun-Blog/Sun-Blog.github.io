@@ -10,7 +10,7 @@ categories:
 
 ---
 
-:::tip 定义
+:::tip 涉及点
 
 函数、arguments、预解析、作用域、对象、数据类型的存储、数组
 
