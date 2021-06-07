@@ -10,5 +10,11 @@ module.exports = [
         "desc": "Enjoy when you can, and endure when you must.",
         "logo": "https://vuepress-theme-reco.recoluan.com/icon_vuepress_reco.png",
         "link": "https://www.recoluan.com"
+    },
+    {
+        "title": "zealsay说你想说",
+        "desc": "zealsay说你想说",
+        "logo": "https://pan.zealsay.com/blog/favicon.ico",
+        "link": "https://www.zealsay.com/"
     }
 ]
