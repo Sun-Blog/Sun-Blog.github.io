@@ -3,9 +3,9 @@ module.exports = [
         //动态标题 先安装在配置， npm install vuepress-plugin-dynamic-title --save
         "dynamic-title",
         {
-            showIcon: "/favicon.jpg",
+            showIcon: "https://p5.toutiaoimg.com/origin/pgc-image/2a94ecb5cdd6475c88dde8859f518987.png",
             showText: "(/≧▽≦/)咦！又好了！",
-            hideIcon: "/failure.ico",
+            hideIcon: "https://p5.toutiaoimg.com/origin/pgc-image/2a94ecb5cdd6475c88dde8859f518987.png",
             hideText: "(●—●)喔哟，崩溃啦！",
             recoverTime: 2000,
         },

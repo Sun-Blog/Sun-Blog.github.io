@@ -1,6 +1,6 @@
 ---
 title: ECharts数据可视化
-date: 2021-06-18
+date: 2021-06-08
 cover: http://p3.qhimg.com/bdr/__85/t01b08f2829ce29e123.jpg
 tags:
   - Echarts
