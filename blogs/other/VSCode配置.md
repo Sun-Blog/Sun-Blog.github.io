@@ -1,9 +1,9 @@
 ---
-title: 开发常用知识及网站
+title: vscode配置
 date: 2021-05-14
 cover: http://browser9.qhimg.com/bdr/__85/t01bdf16da8a63840e8.jpg
 tags:
-  - other
+  - vscode配置
 categories:
   - 其他知识
 ---
@@ -110,26 +110,7 @@ react代码片段，下载人数超多
 ```
 
 
-
-## 日常开发
-
-图片压缩： [TinyPNG](https://tinypng.com/)
-
-浏览器兼容性： [caniuse](https://caniuse.com/)
-
-变量命名： [codelf](https://unbug.github.io/codelf/)
-
-MDN开发者文档： [MDN](https://developer.mozilla.org/zh-CN/)
-
-阿里巴巴图标库：[iconfont](https://www.iconfont.cn/)
-
-在线开发工具：[在线工具](https://tool.lu/c/developer)
-
-[前端开发应知网站（全）](https://wudi98.blog.csdn.net/article/details/91164392)
-
-
-
-个人vscode配置
+## 个人vscode配置
 
 ```javascript
 {
