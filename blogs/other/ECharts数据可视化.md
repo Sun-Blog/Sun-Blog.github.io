@@ -5,7 +5,7 @@ cover: http://p3.qhimg.com/bdr/__85/t01b08f2829ce29e123.jpg
 tags:
   - Echarts
 categories:
-  - 其他知识
+  - Other指南
 
 ---
 

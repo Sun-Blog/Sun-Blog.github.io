@@ -5,7 +5,7 @@ cover: http://browser9.qhimg.com/bdr/__85/t01d684f9e7454a98c4.jpg
 tags:
   - jQuery
 categories:
-  - JS知识
+  - JS指南
 
 ---
 

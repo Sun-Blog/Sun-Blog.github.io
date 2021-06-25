@@ -5,7 +5,7 @@ cover: http://browser9.qhimg.com/bdr/__85/t0153f7a6e7558f8414.jpg
 tags:
   - css
 categories:
-  - CSS知识
+  - CSS指南
 ---
 
 ### 清除浮动

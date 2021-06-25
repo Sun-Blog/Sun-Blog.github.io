@@ -5,7 +5,7 @@ cover: http://browser9.qhimg.com/bdr/__85/t013a4ed4683039d101.jpg
 tags:
   - react
 categories:
-  - React知识
+  - React指南
 ---
 
 this page is react

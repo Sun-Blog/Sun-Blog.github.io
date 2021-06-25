@@ -6,7 +6,7 @@ cover: http://browser9.qhimg.com/bdr/__85/t010478e9c2b48947dc.jpg
 tags:
   - js
 categories:
-  - JS知识
+  - JS指南
 
 ---
 

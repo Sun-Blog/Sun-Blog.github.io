@@ -5,7 +5,7 @@ cover: http://browser9.qhimg.com/bdr/__85/t01bdf16da8a63840e8.jpg
 tags:
   - vscode配置
 categories:
-  - 其他知识
+  - Other指南
 ---
 
 ## VScode

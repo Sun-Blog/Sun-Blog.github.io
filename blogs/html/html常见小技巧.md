@@ -5,7 +5,7 @@ cover: http://browser9.qhimg.com/bdr/__85/t01323a95aa7f4dad7d.jpg
 tags:
   - html
 categories:
-  - HTML知识
+  - HTML指南
 ---
 
 ## 图片懒加载

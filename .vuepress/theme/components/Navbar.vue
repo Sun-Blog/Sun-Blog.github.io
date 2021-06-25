@@ -112,7 +112,7 @@ $navbar-horizontal-padding = 1.5rem
 
 .navbar
   padding $navbar-vertical-padding $navbar-horizontal-padding
-  line-height $navbarHeight + 1.4rem
+  line-height $navbarHeight - 1.2rem
   // box-shadow var(--box-shadow)
   // background var(--background-color)google-fonts.scss
   a, span, img

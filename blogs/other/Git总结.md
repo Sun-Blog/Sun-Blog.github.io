@@ -5,7 +5,7 @@ cover: http://browser9.qhimg.com/bdr/__85/t01a5211bae6d28520e.jpg
 tags:
   - git
 categories:
-  - 其他知识
+  - Other指南
 ---
 
 ## Git安装
@@ -219,3 +219,5 @@ revert: 版本回滚
 build: 打包构建
 ci
 ```
+
+[我在工作中是如何使用 git 的](https://juejin.cn/post/6974184935804534815)

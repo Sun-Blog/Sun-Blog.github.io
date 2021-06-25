@@ -5,7 +5,7 @@ cover: http://browser9.qhimg.com/bdr/__85/t01a270ac5b8d390f74.jpg
 tags:
   - js
 categories:
-  - JS知识
+  - JS指南
 ---
 
 ::: warning 需求
