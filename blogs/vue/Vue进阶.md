@@ -92,6 +92,8 @@ this.$refs.mybtn.innerHTML = "hello"
 
 > 组件化是Vue的一大特性，要想实现组件化，需要在页面中注册组件；注册方式分为全局注册和局部（本地）注册
 
+### 全局注册
+
 ```javascript
 // 注册组件（全局注册）
 Vue.component('组件名',{
@@ -128,6 +130,76 @@ Vue.component('组件名',{
 </script>
 ```
 
+### 局部注册
+
+```javascript
+// 定义组件
+var ComponentA = {
+  data: function () {
+    return {
+      count: 0
+    }
+  },
+  template: '<button v-on:click="count++">You clicked me {{ count }} times.</button>'
+}
+
+// 注册组件，在使用ComponentA的components 选项中注册想要使用的组件
+var ComponentB = {
+    components: {
+        ' button-counter': ComponentA    //组件名称：选项对象
+    },
+    // ...
+}
+```
+
 ## 生命周期
 
 ![](https://img-blog.csdnimg.cn/20181103212250917.png)
+
+```javascript
+var vm = new Vue({
+        el: '#app',
+        data: {
+            message: 'hello world'
+        },
+        template: '<div>我是模板内的{{message}}</div>',
+        methods: {
+            changeMsg () {
+                this.message = 'goodbye world'
+            }
+        },
+        beforeCreate() {
+            console.log('------初始化前------')
+            console.log(this.message)
+            console.log(this.$el)
+        },
+        created () {
+            console.log('------初始化完成------')
+            console.log(this.message)
+            console.log(this.$el)
+        },
+        beforeMount () {
+            console.log('------挂载前---------')
+            console.log(this.message)
+            console.log(this.$el)
+        },
+        mounted () {
+            console.log('------挂载完成---------')
+            console.log(this.message)
+            console.log(this.$el)
+        },
+        beforeUpdate () {
+            console.log('------更新前---------')
+            console.log(this.message)
+            console.log(this.$el)
+        },
+        updated() {
+            console.log('------更新后---------')
+            console.log(this.message)
+            console.log(this.$el)
+        }
+    })
+
+```
+
+![](https://img-blog.csdnimg.cn/20201225133212167.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjcwNzI4Nw==,size_16,color_FFFFFF,t_70)
