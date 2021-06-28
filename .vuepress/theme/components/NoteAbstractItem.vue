@@ -57,6 +57,9 @@
       flex 1
       overflow hidden
       border-radius .5rem
+      display flex
+      align-items center
+      justify-content center
     .cover-img
       border-radius .5rem
       max-width 320px

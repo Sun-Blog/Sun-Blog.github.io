@@ -9,6 +9,7 @@
   },
   "devDependencies": {
     "@vuepress/plugin-active-header-links": "^1.8.2",
+    "@vuepress/plugin-medium-zoom": "^1.8.2",
     "glob": "^7.1.6",
     "mime": "^2.4.4",
     "path": "^0.12.7",

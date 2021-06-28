@@ -8,6 +8,11 @@ categories:
   - Vue指南
 ---
 
+:::tip 涉及点
+简介、插值表达式、vue常用指令、事件修饰符、计算属性、监听属性、虚拟dom与diff算法、v-if与v-show、v-for列表渲染
+:::
+<!-- more -->
+
 ## 简介
 
 > **MVVM模式**
@@ -272,3 +277,28 @@ computed(){
 ## v-show和v-if
 
 > `v-show`和`v-if`在用法上是相同的，也就是说`v-show=布尔值变量`是true的时候，就会显示内容，是false的时候就不显示内容，但是`v-show`改变的是元素的样式，不显示内容时样式是：`display=none`,而`v-if`是直接让元素消失和直接添加元素，效率上，`v-show`更高
+
+## v-for
+
+使用 `v-for` 指令基于一个数组来渲染一个列表。`v-for` 指令需要使用 `item in items` 形式的特殊语法，其中 `items` 是源数据数组，而 `item` 则是被迭代的数组元素的**别名**
+
+```javascript
+<ul id='app'>
+  <li v-for="(item, index) in items">
+      {{ index }} - {{ item.message }}
+  </li>
+</ul>
+
+var example2 = new Vue({
+  el: '#app',
+  data: {
+    items: [
+      { message: 'Foo' },
+      { message: 'Bar' }
+    ]
+  }
+})
+
+// 0-Foo
+// 1-Bar
+```
