@@ -10,7 +10,7 @@ module.exports = {
   },
   "themeConfig": {
     "type": "blog",
-    "sidebar": false,  //侧边栏
+    "sidebar": true,  //侧边栏
 
     "nav": require('./config/nav'),
     "blogConfig": require('./config/blog'),

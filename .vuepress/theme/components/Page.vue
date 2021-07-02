@@ -246,7 +246,7 @@
 
   .page
     position relative
-    margin-top -18rem
+    margin-top -12rem
     padding-top 2rem
     padding-bottom 2rem
     padding-right 14rem
@@ -254,10 +254,11 @@
 
     .side-bar
       position fixed
-      top 10rem
-      bottom 10rem
-      right 2rem
+      // top 10rem 
+      bottom 12rem
+      right 0rem
       overflow-y scroll
+      height 31rem
 
       &::-webkit-scrollbar
         width: 0
@@ -265,7 +266,7 @@
 
     .page-title
       max-width: $contentWidth;
-      height 15rem
+      height 8rem
       margin: 0 auto;
       padding: 1rem 2.5rem;
       color $whiteColor

@@ -9,9 +9,63 @@ categories:
 ---
 
 :::tip 涉及点
-vue对象操作、组件、生命周期
+生命周期、vue对象操作、组件
 :::
 <!-- more -->
+
+## 生命周期
+
+![](https://img-blog.csdnimg.cn/20181103212250917.png)
+
+```javascript
+var vm = new Vue({
+        el: '#app',
+        data: {
+            message: 'hello world'
+        },
+        template: '<div>我是模板内的{{message}}</div>',
+        methods: {
+            changeMsg () {
+                this.message = 'goodbye world'
+            }
+        },
+        beforeCreate() {
+            console.log('------初始化前------')
+            console.log(this.message)
+            console.log(this.$el)
+        },
+        created () {
+            console.log('------初始化完成------')
+            console.log(this.message)
+            console.log(this.$el)
+        },
+        beforeMount () {
+            console.log('------挂载前---------')
+            console.log(this.message)
+            console.log(this.$el)
+        },
+        mounted () {
+            console.log('------挂载完成---------')
+            console.log(this.message)
+            console.log(this.$el)
+        },
+        beforeUpdate () {
+            console.log('------更新前---------')
+            console.log(this.message)
+            console.log(this.$el)
+        },
+        updated() {
+            console.log('------更新后---------')
+            console.log(this.message)
+            console.log(this.$el)
+        }
+    })
+
+```
+
+![](https://img-blog.csdnimg.cn/20201225133212167.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjcwNzI4Nw==,size_16,color_FFFFFF,t_70)
+
+
 
 ## Vue对象操作
 
@@ -91,16 +145,20 @@ this.$refs.mybtn.innerHTML = "hello"
 ## 组件
 
 > 组件化是Vue的一大特性，要想实现组件化，需要在页面中注册组件；注册方式分为全局注册和局部（本地）注册
+>
+> 当我们通过调用`Vue.component()`注册组件时，组件的注册是全局的；这意味着该组件可以在任意Vue示例下使用；如果注册的组件是挂载在某个实例中，那么就是一个局部组件
 
-### 全局注册
+### 全局组件
 
 ```javascript
-// 注册组件（全局注册）
+// 注册组件（全局组件）
 Vue.component('组件名',{
     // vue对象
 })
 
-// 使用组件
+// ==============================================================================================
+
+// 示例
 <body>
     <div id="app">
         <model></model>
@@ -108,6 +166,7 @@ Vue.component('组件名',{
 </body>
 
 <script>
+    // 全局注册使用 component
     Vue.component('model', {
         template: "<div>{{ title }}<button @click = 'btnfn'>点击</button></div>",
         // 注意
@@ -130,11 +189,11 @@ Vue.component('组件名',{
 </script>
 ```
 
-### 局部注册
+### 局部组件
 
 ```javascript
-// 定义组件
-var ComponentA = {
+// 示例
+var Component1 = {
   data: function () {
     return {
       count: 0
@@ -144,62 +203,101 @@ var ComponentA = {
 }
 
 // 注册组件，在使用ComponentA的components 选项中注册想要使用的组件
-var ComponentB = {
+var Component2 = {
+    // 局部注册使用 components
     components: {
-        ' button-counter': ComponentA    //组件名称：选项对象
+        ' button-counter': Component1    //组件名称：选项对象
     },
     // ...
 }
 ```
 
-## 生命周期
+:warning:注意
 
-![](https://img-blog.csdnimg.cn/20181103212250917.png)
+1、当注册组件 (或者 prop) 时，可以使用 kebab-case (短横线分隔命名)、camelCase (驼峰式命名) 或 PascalCase (单词首字母大写命名)；不可使用类似`ComponentA`类型命名
+
+2、被注册的组件要放在注册点前
+
+### 组件抽离
 
 ```javascript
-var vm = new Vue({
-        el: '#app',
-        data: {
-            message: 'hello world'
-        },
-        template: '<div>我是模板内的{{message}}</div>',
-        methods: {
-            changeMsg () {
-                this.message = 'goodbye world'
-            }
-        },
-        beforeCreate() {
-            console.log('------初始化前------')
-            console.log(this.message)
-            console.log(this.$el)
-        },
-        created () {
-            console.log('------初始化完成------')
-            console.log(this.message)
-            console.log(this.$el)
-        },
-        beforeMount () {
-            console.log('------挂载前---------')
-            console.log(this.message)
-            console.log(this.$el)
-        },
-        mounted () {
-            console.log('------挂载完成---------')
-            console.log(this.message)
-            console.log(this.$el)
-        },
-        beforeUpdate () {
-            console.log('------更新前---------')
-            console.log(this.message)
-            console.log(this.$el)
-        },
-        updated() {
-            console.log('------更新后---------')
-            console.log(this.message)
-            console.log(this.$el)
-        }
-    })
+<body>
+    <div id="app">
+        <cpn></cpn>
+    </div>
 
+    // 方式一：script标签，类型必须是text/x-template
+    <script type="text/x-template" id="cpn">
+        <div>
+            <h2>我是标题</h2>
+            <p>我是内容</p>
+        </div>
+    </script>
+
+    // 方式二：template标签
+    <template id="cpn">
+        <div>
+            <h2>我是标题</h2>
+            <p>我是内容</p>
+        </div>
+    </template>
+
+    <script>
+        Vue.component('cpn', {
+            template: '#cpn',
+        })
+
+        new Vue({
+            el: '#app',
+            data: {
+
+            }
+        })
+    </script>
+</body>
 ```
 
-![](https://img-blog.csdnimg.cn/20201225133212167.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjcwNzI4Nw==,size_16,color_FFFFFF,t_70)
+### 组件通信
+
+#### 父传子
+
+```javascript
+<body>
+    <div id="app">
+        <!-- 传参 -->
+        <cpn :cmovies='movies'></cpn>
+    </div>
+
+    <!-- 组件模板 -->
+    <template id="cpn">
+        <div>
+            <ul>
+                <li v-for='item in cmovies'>{{ item }}</li>
+            </ul>
+        </div>
+    </template>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script>
+        // 注册组件
+        const cpn = {
+            template: '#cpn',
+            // 接参
+            props: {
+                cmovies: Array,
+            },
+        }
+
+        new Vue({
+            el: '#app',
+            data: {
+                movies: ['我和我的家乡', '泰坦尼克号', '觉醒年代', '海贼王', '镇魂街'],
+            },
+            components: {
+                cpn,
+            }
+        })
+    </script>
+</body>
+```
+

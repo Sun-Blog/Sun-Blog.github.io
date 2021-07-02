@@ -338,7 +338,7 @@
 
   .wrapper-page {
     //background: url("https://pan.zealsay.com/zealsay/cover/1.jpg") center center / cover no-repeat
-    height 28rem
+    height 14rem
     position relative
   }
 </style>
