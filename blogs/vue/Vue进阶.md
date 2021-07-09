@@ -9,7 +9,7 @@ categories:
 ---
 
 :::tip 涉及点
-生命周期、vue对象操作、组件
+生命周期、vue对象操作、组件、插槽
 :::
 <!-- more -->
 
@@ -301,3 +301,106 @@ var Component2 = {
 </body>
 ```
 
+![](https://p26-tt.byteimg.com/origin/pgc-image/ad5cfccf0ccc498f97bb604e0da70b56.png)
+
+> vue中，组件传参时，如果使用驼峰形式作为属性值时，不能直接原样书写，否则会接收不到数据；需要使用`-`分割，例如：cMives 变成 c-mives；但是在使用cli脚手架时，则不会出现这种问题，是因为脚手架内部对其进行了编译解析
+
+#### 子传父
+
+子组件通过$emit方法（用来触发事件,详情见[官网](https://cn.vuejs.org/v2/api/#vm-emit)）传递参数
+
+```javascript
+<body>
+    <div id="app">
+        outNum:{{outNum}}<br>
+        <counter @outshow="mainshow"></counter>
+    </div>
+
+    <script>
+        Vue.component("counter",{
+            template:`<button @click="show(10)">show</button>`,
+            methods:{
+                show(num){
+                    this.$emit("outshow",num)
+                }
+            }
+        })
+
+
+        var vm = new Vue({
+            el:"#app",
+            data:{
+                outNum:''
+            },
+            methods:{
+                mainshow(myoutnum){
+                    this.outNum = myoutnum
+                }
+            }
+
+        });
+    </script>
+</body>
+
+```
+
+## 插槽
+
+slot (父组件 在子组件<slot> </slot>处插入内容)
+
+Vue 实现了一套内容分发的 API，将`<slot>`元素作为承载分发内容的出口，这是vue文档上的说明。具体来说，slot就是可以让你在组件内添加内容的‘空间’。
+
+### 单个插槽
+
+**在子组件中使用 slot 做一个插槽，父组件中的内容就可以插到这个插槽里边。**
+
+```javascript
+<div id="app">                   
+    <child-component>            
+      <p>来自父组件的问候</p>  // 这看似是在子组件中写的内容，但其实这是属于父组件的作用域
+    </child-component>         // 也就是说，其实这个 p元素 ，是父组件中的内容  
+</div>                          
+
+Vue.component('child-component', {
+  template: `<div>
+    <slot></slot>  // 在子组件中使用 slot 元素
+  </div>`
+})
+
+var app = new Vue({
+  el: '#app',
+  data: {}
+})
+```
+
+### 具名插槽
+
+如果父组件中有很多内容都要放到子组件中，如果子组件中只有一个 slot（插槽）的话，那所有内容都挤到一起，显然是不合理的。所以我们需要多个 slot（插槽），并给每个 slot（插槽）起个名字，那么就能很方便的讲指定内容放到指定 slot（插槽）中
+
+```javascript
+<div id="app">
+    <child-component>
+      <p>离离原上草，</p>
+      <p>一岁一枯荣。</p>
+      <p>野火烧不尽，</p>
+      <p>春风吹又生。</p>                      // 上面的四个 p 元素没名字？
+      <address slot="footer">白居易</address>  // 用 slot 起名字
+      <h2 slot="header">赋得古原草送别</h2>  // 用 slot 起名字
+    </child-component>
+</div>
+
+Vue.component('child-component', {
+  template: `<div>
+    <slot name="header"></slot>  // 有 name
+    <slot></slot>                // 没有 name ？这个先放着，后面再说
+    <slot name="footer"></slot>  // 有 name
+  </div>`
+})
+
+var app = new Vue({
+  el: '#app',
+  data: {}
+})
+```
+
+[插槽参考链接](https://zhuanlan.zhihu.com/p/67202160)
