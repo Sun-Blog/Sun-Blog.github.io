@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>模块化导入与导出 | 南风</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="https://p26-tt.byteimg.com/origin/pgc-image/bbc9993bf04442938c3696c4501c6f55.jpg">
+    <script>
+          var _hmt = _hmt || [];
+          (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?8c8f944e36fca7d15275ed1aae1172cc";
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+          })();
+          </script>
+    <meta name="description" content="南风知我意，吹梦到西洲。">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/assets/css/0.styles.200533b9.css" as="style"><link rel="preload" href="/assets/js/app.b3ce9a04.js" as="script"><link rel="preload" href="/assets/js/5.ae27d11c.js" as="script"><link rel="preload" href="/assets/js/1.0df3e8d3.js" as="script"><link rel="preload" href="/assets/js/33.4bff68cc.js" as="script"><link rel="prefetch" href="/assets/js/10.78b73aba.js"><link rel="prefetch" href="/assets/js/11.8a7b4139.js"><link rel="prefetch" href="/assets/js/12.6c6f52aa.js"><link rel="prefetch" href="/assets/js/13.a294be68.js"><link rel="prefetch" href="/assets/js/14.851334ca.js"><link rel="prefetch" href="/assets/js/15.4cf42038.js"><link rel="prefetch" href="/assets/js/16.90215bfb.js"><link rel="prefetch" href="/assets/js/17.46aa8205.js"><link rel="prefetch" href="/assets/js/18.dcdd2ae4.js"><link rel="prefetch" href="/assets/js/19.960d8b88.js"><link rel="prefetch" href="/assets/js/20.21726f95.js"><link rel="prefetch" href="/assets/js/21.cbaf8f66.js"><link rel="prefetch" href="/assets/js/22.af4b667a.js"><link rel="prefetch" href="/assets/js/23.f0e797f3.js"><link rel="prefetch" href="/assets/js/24.bdcc5083.js"><link rel="prefetch" href="/assets/js/25.ebbc17b0.js"><link rel="prefetch" href="/assets/js/26.32b652f7.js"><link rel="prefetch" href="/assets/js/27.cf1ebf45.js"><link rel="prefetch" href="/assets/js/28.b2dfb6a3.js"><link rel="prefetch" href="/assets/js/29.a722cd60.js"><link rel="prefetch" href="/assets/js/3.a82585fa.js"><link rel="prefetch" href="/assets/js/30.32136c90.js"><link rel="prefetch" href="/assets/js/31.7e4c4ce3.js"><link rel="prefetch" href="/assets/js/32.5072682f.js"><link rel="prefetch" href="/assets/js/34.fe089146.js"><link rel="prefetch" href="/assets/js/35.fd05d26c.js"><link rel="prefetch" href="/assets/js/36.2fa34142.js"><link rel="prefetch" href="/assets/js/37.d002faa6.js"><link rel="prefetch" href="/assets/js/38.27c1abcd.js"><link rel="prefetch" href="/assets/js/39.1e12ef9e.js"><link rel="prefetch" href="/assets/js/4.bbe7478b.js"><link rel="prefetch" href="/assets/js/40.dc92939c.js"><link rel="prefetch" href="/assets/js/41.20c8f0c7.js"><link rel="prefetch" href="/assets/js/42.3dadc6fb.js"><link rel="prefetch" href="/assets/js/43.682647e4.js"><link rel="prefetch" href="/assets/js/44.d8aac41a.js"><link rel="prefetch" href="/assets/js/45.29a7e3c3.js"><link rel="prefetch" href="/assets/js/46.ba90d572.js"><link rel="prefetch" href="/assets/js/47.1b0f1cbb.js"><link rel="prefetch" href="/assets/js/6.96319e8b.js"><link rel="prefetch" href="/assets/js/7.aa967839.js"><link rel="prefetch" href="/assets/js/8.c37287a7.js"><link rel="prefetch" href="/assets/js/9.60b3224d.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.200533b9.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar" data-v-874f31fa><div data-v-874f31fa><div id="loader-wrapper" class="loading-wrapper" data-v-2c578df8 data-v-874f31fa data-v-874f31fa><div class="loader-main" data-v-2c578df8><div data-v-2c578df8></div><div data-v-2c578df8></div><div data-v-2c578df8></div><div data-v-2c578df8></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-5cb9a64e data-v-874f31fa data-v-874f31fa><h3 class="title" style="display:none;" data-v-5cb9a64e data-v-5cb9a64e>南风</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-5cb9a64e data-v-5cb9a64e><input type="password" value="" data-v-5cb9a64e> <span data-v-5cb9a64e>Konck! Knock!</span> <button data-v-5cb9a64e>OK</button></label> <div class="footer" style="display:none;" data-v-5cb9a64e data-v-5cb9a64e><span data-v-5cb9a64e><i class="iconfont reco-theme" data-v-5cb9a64e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-5cb9a64e>vuePress-theme-reco</a></span> <span data-v-5cb9a64e><i class="iconfont reco-copyright" data-v-5cb9a64e></i> <a data-v-5cb9a64e><span data-v-5cb9a64e>南风</span>
+            
+          <!---->
+          2021
+        </a></span></div></div> <div class="hide" data-v-874f31fa><div data-v-874f31fa><div id="smart" class="wrapper-page" style="background-image:url(http://p4.qhimg.com/bdr/__85/t015ab70e284c723052.jpg);background-position-x:center;background-position-y:center;background-size:cover;background-repeat-x:no-repeat;background-repeat-y:no-repeat;" data-v-874f31fa><header class="navbar" data-v-874f31fa><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/logo.png" alt="南风" class="logo"> <span class="site-name">南风</span></a> <div class="links"><div id="dayNightSwitch" class="generalWrapper" data-v-32f44868><a class="click" data-v-32f44868><div class="onOff daySwitch" data-v-32f44868><div class="star star1" data-v-32f44868></div> <div class="star star2" data-v-32f44868></div> <div class="star star3" data-v-32f44868></div> <div class="star star4" data-v-32f44868></div> <div class="star star5" data-v-32f44868></div> <div class="star sky" data-v-32f44868></div> <div class="sunMoon" data-v-32f44868><div class="crater crater1" data-v-32f44868></div> <div class="crater crater2" data-v-32f44868></div> <div class="crater crater3" data-v-32f44868></div> <div class="cloud part1" data-v-32f44868></div> <div class="cloud part2" data-v-32f44868></div></div></div></a></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/HTML指南/" class="nav-link"><i class="iconfont undefined"></i>
+  HTML指南
+</a></li><li class="dropdown-item"><!----> <a href="/categories/CSS指南/" class="nav-link"><i class="iconfont undefined"></i>
+  CSS指南
+</a></li><li class="dropdown-item"><!----> <a href="/categories/JS指南/" class="nav-link"><i class="iconfont undefined"></i>
+  JS指南
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Node指南/" class="nav-link"><i class="iconfont undefined"></i>
+  Node指南
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Other指南/" class="nav-link"><i class="iconfont undefined"></i>
+  Other指南
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Vue指南/" class="nav-link"><i class="iconfont undefined"></i>
+  Vue指南
+</a></li><li class="dropdown-item"><!----> <a href="/categories/React指南/" class="nav-link"><i class="iconfont undefined"></i>
+  React指南
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间轴
+</a></div><div class="nav-item"><a href="/about/" class="nav-link"><i class="iconfont reco-account"></i>
+  关于
+</a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-874f31fa></div> <aside class="sidebar" data-v-874f31fa><div class="personal-info-wrapper" data-v-03833281 data-v-874f31fa><img src="https://p26-tt.byteimg.com/origin/pgc-image/bbc9993bf04442938c3696c4501c6f55.jpg" alt="author-avatar" class="personal-img" data-v-03833281> <h3 class="name" data-v-03833281>
+    南风
+  </h3> <div class="num" data-v-03833281><div data-v-03833281><h3 data-v-03833281>34</h3> <h6 data-v-03833281>文章</h6></div> <div data-v-03833281><h3 data-v-03833281>15</h3> <h6 data-v-03833281>标签</h6></div></div> <hr data-v-03833281></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/HTML指南/" class="nav-link"><i class="iconfont undefined"></i>
+  HTML指南
+</a></li><li class="dropdown-item"><!----> <a href="/categories/CSS指南/" class="nav-link"><i class="iconfont undefined"></i>
+  CSS指南
+</a></li><li class="dropdown-item"><!----> <a href="/categories/JS指南/" class="nav-link"><i class="iconfont undefined"></i>
+  JS指南
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Node指南/" class="nav-link"><i class="iconfont undefined"></i>
+  Node指南
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Other指南/" class="nav-link"><i class="iconfont undefined"></i>
+  Other指南
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Vue指南/" class="nav-link"><i class="iconfont undefined"></i>
+  Vue指南
+</a></li><li class="dropdown-item"><!----> <a href="/categories/React指南/" class="nav-link"><i class="iconfont undefined"></i>
+  React指南
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间轴
+</a></div><div class="nav-item"><a href="/about/" class="nav-link"><i class="iconfont reco-account"></i>
+  关于
+</a></div> <!----></nav> <!----> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-5cb9a64e data-v-874f31fa><h3 class="title" style="display:none;" data-v-5cb9a64e data-v-5cb9a64e>模块化导入与导出</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-5cb9a64e data-v-5cb9a64e><input type="password" value="" data-v-5cb9a64e> <span data-v-5cb9a64e>Konck! Knock!</span> <button data-v-5cb9a64e>OK</button></label> <div class="footer" style="display:none;" data-v-5cb9a64e data-v-5cb9a64e><span data-v-5cb9a64e><i class="iconfont reco-theme" data-v-5cb9a64e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-5cb9a64e>vuePress-theme-reco</a></span> <span data-v-5cb9a64e><i class="iconfont reco-copyright" data-v-5cb9a64e></i> <a data-v-5cb9a64e><span data-v-5cb9a64e>南风</span>
+            
+          <!---->
+          2021
+        </a></span></div></div></div> <div data-v-874f31fa><main class="page"><div class="page-title" style="display:none;"><h1 class="title">模块化导入与导出</h1> <div class="page-info" data-v-0efa1f05><i class="iconfont reco-account" data-v-0efa1f05><span data-v-0efa1f05>南风</span></i> <i class="iconfont reco-date" data-v-0efa1f05><span data-v-0efa1f05>2021-07-09</span></i> <!----> <i class="iconfont reco-tag tags" data-v-0efa1f05><span class="tag-item" data-v-0efa1f05>js</span></i></div></div> <div class="theme-reco-content content__default" style="display:none;"><blockquote><p>模块化的开发方式可以提高代码复用率，方便进行代码的管理。通常一个文件就是一个模块，有自己的作用域，只向外暴露特定的变量和函数。</p></blockquote> <h2 id="commonjs"><a href="#commonjs" class="header-anchor">#</a> CommonJS</h2> <p>Node.js是commonJS规范的主要实践者，它有四个重要的环境变量为模块化的实现提供支持：<code>module</code>、<code>exports</code>、<code>require</code>、<code>global</code>。实际使用时，用<code>module.exports</code>定义当前模块对外输出的接口（不推荐直接用<code>exports</code>），用<code>require</code>加载模块。</p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token comment">// 定义模块math.js</span>
+<span class="token keyword">var</span> basicNum <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token keyword">function</span> <span class="token function">add</span><span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span> b</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> a <span class="token operator">+</span> b<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token comment">//在这里写上需要向外暴露的函数、变量</span>
+  add<span class="token operator">:</span> add<span class="token punctuation">,</span>
+  basicNum<span class="token operator">:</span> basicNum
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 引用自定义的模块时，参数包含路径，可省略.js</span>
+<span class="token keyword">var</span> math <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./math'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+math<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 引用核心模块时，不需要带路径</span>
+<span class="token keyword">var</span> http <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'http'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+http<span class="token punctuation">.</span><span class="token function">createService</span><span class="token punctuation">(</span><span class="token operator">...</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span><span class="token number">3000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br></div></div><p>commonJS用同步的方式加载模块。在服务端，模块文件都存在本地磁盘，读取非常快，所以这样做不会有问题。但是在浏览器端，限于网络原因，更合理的方案是使用异步加载。</p> <h2 id="es6-module"><a href="#es6-module" class="header-anchor">#</a> ES6 Module</h2> <p>ES6 在语言标准的层面上，实现了模块功能，而且实现得相当简单，旨在成为浏览器和服务器通用的模块解决方案。其模块功能主要由两个命令构成：<code>export</code>和<code>import</code>。<code>export</code>命令用于规定模块的对外接口，<code>import</code>命令用于输入其他模块提供的功能。</p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token comment">/** 定义模块 math.js **/</span>
+<span class="token keyword">var</span> basicNum <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> <span class="token function-variable function">add</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span> b</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> a <span class="token operator">+</span> b<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token punctuation">{</span> basicNum<span class="token punctuation">,</span> add <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">/** 引用模块 **/</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> basicNum<span class="token punctuation">,</span> add <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./math'</span><span class="token punctuation">;</span>
+<span class="token keyword">function</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token parameter">ele</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    ele<span class="token punctuation">.</span>textContent <span class="token operator">=</span> <span class="token function">add</span><span class="token punctuation">(</span><span class="token number">99</span> <span class="token operator">+</span> basicNum<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><p>如上例所示，使用<code>import</code>命令的时候，用户需要知道所要加载的变量名或函数名。其实ES6还提供了<code>export default</code>命令，为模块指定默认输出，对应的<code>import</code>语句不需要使用大括号。这也更趋近于ADM的引用写法。</p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token comment">/** export default **/</span>
+<span class="token comment">//定义输出</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span> basicNum<span class="token punctuation">,</span> add <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token comment">//引入</span>
+<span class="token keyword">import</span> math <span class="token keyword">from</span> <span class="token string">'./math'</span><span class="token punctuation">;</span>
+<span class="token keyword">function</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token parameter">ele</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    ele<span class="token punctuation">.</span>textContent <span class="token operator">=</span> math<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">99</span> <span class="token operator">+</span> math<span class="token punctuation">.</span>basicNum<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><p>ES6的模块不是对象，<code>import</code>命令会被 JavaScript 引擎静态分析，在编译时就引入模块代码，而不是在代码运行时加载，所以无法实现条件加载。也正因为这个，使得静态分析成为可能。</p> <h2 id="es6-模块与-commonjs-模块的差异"><a href="#es6-模块与-commonjs-模块的差异" class="header-anchor">#</a> ES6 模块与 CommonJS 模块的差异</h2> <h4 id="_1-commonjs-模块输出的是一个值的拷贝-es6-模块输出的是值的引用。"><a href="#_1-commonjs-模块输出的是一个值的拷贝-es6-模块输出的是值的引用。" class="header-anchor">#</a> 1. CommonJS 模块输出的是一个值的拷贝，ES6 模块输出的是值的引用。</h4> <ul><li>CommonJS 模块输出的是值的拷贝，也就是说，一旦输出一个值，模块内部的变化就影响不到这个值。</li> <li>ES6 模块的运行机制与 CommonJS 不一样。JS 引擎对脚本静态分析的时候，遇到模块加载命令<code>import</code>，就会生成一个只读引用。等到脚本真正执行时，再根据这个只读引用，到被加载的那个模块里面去取值。换句话说，ES6 的<code>import</code>有点像 Unix 系统的“符号连接”，原始值变了，<code>import</code>加载的值也会跟着变。因此，ES6 模块是动态引用，并且不会缓存值，模块里面的变量绑定其所在的模块。</li></ul> <h4 id="_2-commonjs-模块是运行时加载-es6-模块是编译时输出接口。"><a href="#_2-commonjs-模块是运行时加载-es6-模块是编译时输出接口。" class="header-anchor">#</a> 2. CommonJS 模块是运行时加载，ES6 模块是编译时输出接口。</h4> <ul><li>运行时加载: CommonJS 模块就是对象；即在输入时是先加载整个模块，生成一个对象，然后再从这个对象上面读取方法，这种加载称为“运行时加载”。</li> <li>编译时加载: ES6 模块不是对象，而是通过 <code>export</code> 命令显式指定输出的代码，<code>import</code>时采用静态命令的形式。即在<code>import</code>时可以指定加载某个输出值，而不是加载整个模块，这种加载称为“编译时加载”。</li></ul> <p>CommonJS 加载的是一个对象（即<code>module.exports</code>属性），该对象只有在脚本运行完才会生成。而 ES6 模块不是对象，它的对外接口只是一种静态定义，在代码静态解析阶段就会生成。</p></div> <footer class="page-edit" style="display:none;"><!----> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">2021/7/9下午5:28:25</span></div></footer> <!----> <!----> <!----></main> <!----></div></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-a008c6ba data-v-a008c6ba><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-a008c6ba><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-a008c6ba></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-a008c6ba></path></svg></div><div></div><APlayer audio="" fixed="true" mini="true" theme="#b7daff" loop="loop" order="random" preload="auto" volume="0.15" mutex="true" lrc-type="0" list-max-height="250" storage-name="vuepress-plugin-meting" id="aplayer-fixed"></APlayer></div></div>
+    <script src="/assets/js/app.b3ce9a04.js" defer></script><script src="/assets/js/5.ae27d11c.js" defer></script><script src="/assets/js/1.0df3e8d3.js" defer></script><script src="/assets/js/33.4bff68cc.js" defer></script>
+  </body>
+</html>
